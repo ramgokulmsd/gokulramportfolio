@@ -50,9 +50,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ramgokulmsd/portfolio-.git"
-  },
-  "bugs": {
-    "url": "https://github.com/ramgokulmsd/portfolio-/issues"
-  },
-  "homepage": "https://github.com/ramgokulmsd/portfolio-#readme"
+  }
+
 }

@@ -1,199 +1,90 @@
 import React from 'react';
-import styled from 'styled-components';
-import {Row,Col} from 'react-bootstrap';
-import { Tabs, Tab, TabPanel, TabList } from 'react-web-tabs';
-import 'react-web-tabs/dist/react-web-tabs.css';
-import {FaUserGraduate,FaHistory,FaLaptopCode,FaRegChartBar,FaPalette} from "react-icons/fa";
-
+import './Custom.css';
+import { Accordion, Card } from 'react-bootstrap';
+import { FaUserGraduate, FaHistory, FaLaptopCode, FaPalette, FaCheck } from "react-icons/fa";
 
 function Resume() {
-        return(
-			           <Myresume>
-				          <div className="container">
-						        <div className="inside">
-            				  <h2>Resume</h2>
-            				<p className="choose">My formal Bio Details.</p>
-            				<div className="underline"></div>
-              			</div> 
-              		
-              				<Tabs defaultTab="one" onChange={(tabId) => { console.log(tabId) }}>
-              					<Row>
-              					<Col lg={3} sm={12}>
+  return (
+    <>
+      <section id="resume">
+        <div className="container">
+          <div className="title-resume">
+            <h2>Resume</h2>
+            <p>My formal Bio Details.</p>
+            <div className="underline"></div>
+          </div>
+          <div className="resume-section">
+            <Accordion defaultActiveKey="0">
+              <Card>
+                <Accordion.Toggle as={Card.Header} eventKey="0">
+                  <FaUserGraduate className="ficon" />Education
+                </Accordion.Toggle>
+                <Accordion.Collapse eventKey="0">
+                  <Card.Body>
+                    <h6>BE computer science and Engineering (2016-2020)</h6>
+                    <p>-6.8 (CGPA) - pursuing SENGUNTHAR ENGINEERING COLLEGE - TIRUCHENGODE.</p>
+                    <h6>H.S.C (2014-2016)</h6>
+                    <p>- 66% SRI RAGAVENDRA HIGHER SECONDARY SCHOOL, SATHY.</p>
+                    <h6>-S.S.L.C (2013-2014)</h6>
+                    <p> - 83% SRI PARIYUR AMMAN HIGHER SECONDARY SCHOOL,T.N.PALAYAM.</p>
+                  </Card.Body>
+                </Accordion.Collapse>
+              </Card>
+              <Card>
+                <Accordion.Toggle as={Card.Header} eventKey="1">
+                  <FaHistory className="ficon" />  Work History
+                              </Accordion.Toggle>
+                <Accordion.Collapse eventKey="1">
+                  <Card.Body>
+                    <p> I am currently doing freelancer works and  I am looking for full-time job.</p>
+                    <h6>WorkSamples :</h6>
+                    <p>React
+                                <span> <a href="http://www.reactsample.epizy.com"> Check it.</a></span>
+                    </p>
 
-        							   <TabList>
-                         <div>
-                          <FaUserGraduate/>
-          								<Tab tabFor="one">Education</Tab>
-                          </div>
+                    <p>Bootstrap <a href="http://www.gokulramsample.epizy.com">check it.</a>  </p>
 
-                          <div>
-                          <FaHistory/>
-          								<Tab tabFor="two">Work History</Tab>
-                          </div>
-                          <div>
-                          <FaLaptopCode/>
-          								<Tab tabFor="three">Programming Skill</Tab>
-                          </div>
-                          <div>
-                          <FaPalette/>
-          								<Tab tabFor="four">Designer Skills</Tab>
-                          </div>
-                          <div>
-                           <FaRegChartBar/>
-          								<Tab tabFor="five">SEO Skills</Tab>
-          								</div>
-        							</TabList>
-        						</Col>
-        						<Col lg={9} sm={12}>
-	        							<TabPanel tabId="one">
+                    <p>Github <a href="https://github.com/ramgokulmsd">Check it.</a>  </p>
 
-	      									<h5>Sengunthar Engineering College	</h5>
-	      									<h5>BE Computer Science and  Engineer</h5>
-	      									<p>Reference site about Lorem Ipsum, giving information on its origins, as well as a 
-											random Lipsum generator.</p>
-											
-	      									<h5>B.sc in Computer Engineer</h5>
-	      									<p>Reference site about Lorem Ipsum, giving information on its origins, as well as a 
-											random Lipsum generator.</p>
-											<h5>Envato University</h5>
-	      									<h5>B.sc in Computer Engineer</h5>
-	      									<p>Reference site about Lorem Ipsum, giving information on its origins, as well as a 
-											random Lipsum generator.</p>
-	        						 	</TabPanel>
-	        						 	<TabPanel tabId="two">
-      										<h5>Envato University</h5>
-      										<h5>B.sc in Computer Engineer</h5>
-      										<p>Reference site about Lorem Ipsum, giving information on its origins, as well as a 
-											random Lipsum generator.</p>
-											<h5>Envato University</h5>
-      										<h5>B.sc in Computer Engineer</h5>
-      										<p>Reference site about Lorem Ipsum, giving information on its origins, as well as a 
-											random Lipsum generator.</p>
-											<h5>Envato University</h5>
-      										<h5>B.sc in Computer Engineer</h5>
-      										<p>Reference site about Lorem Ipsum, giving information on its origins, as well as a 
-											random Lipsum generator.</p>
-        						 		</TabPanel>
-        						 		<TabPanel tabId="three">
-        						 			<div>
-      											<li>HTML</li>
-      											<li>CSS</li>
-      											<li>JQuery</li>
-      											<li>Bootrap</li>
-      											<li>ReactJs</li>
-      											<li>HTML</li>
-      										</div>
-        						 		</TabPanel>
-        						 		<TabPanel tabId="four">
-      										<h5>Envato University</h5>
-      										<h5>B.sc in Computer Engineer</h5>
-      										<p>Reference site about Lorem Ipsum, giving information on its origins, as well as a 
-											random Lipsum generator.</p>
-											<h5>Envato University</h5>
-      										<h5>B.sc in Computer Engineer</h5>
-      										<p>Reference site about Lorem Ipsum, giving information on its origins, as well as a 
-											random Lipsum generator.</p>
-											<h5>Envato University</h5>
-      										<h5>B.sc in Computer Engineer</h5>
-      										<p>Reference site about Lorem Ipsum, giving information on its origins, as well as a 
-											random Lipsum generator.</p>
-        						 		</TabPanel>
-        						 		<TabPanel tabId="five">
-      										<h5>Envato University</h5>
-      										<h5>B.sc in Computer Engineer</h5>
-      										<p>Reference site about Lorem Ipsum, giving information on its origins, as well as a 
-											random Lipsum generator.</p>
-											<h5>Envato University</h5>
-      										<h5>B.sc in Computer Engineer</h5>
-      										<p>Reference site about Lorem Ipsum, giving information on its origins, as well as a 
-											random Lipsum generator.</p>
-											<h5>Envato University</h5>
-      										<h5>B.sc in Computer Engineer</h5>
-      										<p>Reference site about Lorem Ipsum, giving information on its origins, as well as a 
-											random Lipsum generator.</p>
-        						 		</TabPanel>
-        						 	
-      							</Col>
-      							</Row>
-      						</Tabs>
-	        			
-             		</div>	
-             </Myresume>
+                  </Card.Body>
+                </Accordion.Collapse>
+              </Card>
+              <Card>
+                <Accordion.Toggle as={Card.Header} eventKey="2">
+                  <FaLaptopCode className="ficon" />Programming Skills
+                              </Accordion.Toggle>
+                <Accordion.Collapse eventKey="2">
+                  <Card.Body>
+                    <ul><FaCheck className="ficon" />HTML</ul>
+                    <ul><FaCheck className="ficon" />CSS</ul>
+                    <ul><FaCheck className="ficon" />Jquery</ul>
+                    <ul><FaCheck className="ficon" />Reactjs</ul>
+                    <ul><FaCheck className="ficon" />Bootstrap</ul>
+                  </Card.Body>
+                </Accordion.Collapse>
+              </Card>
+              <Card>
+                <Accordion.Toggle as={Card.Header} eventKey="3">
+                  <FaPalette className="ficon" />Other Skills
+                              </Accordion.Toggle>
+                <Accordion.Collapse eventKey="3">
+                  <Card.Body>
+                    <ul><FaCheck className="ficon" />Figma</ul>
+                    <ul><FaCheck className="ficon" />Git</ul>
+                    <ul><FaCheck className="ficon" />MicroSoft</ul>
+                    <ul><FaCheck className="ficon" />GIMP</ul>
+                  </Card.Body>
+                </Accordion.Collapse>
+              </Card>
 
+            </Accordion>
+          </div>
+        </div>
+      </section>
+    </>
+  );
 
-		);
-
-	}
-
+}
 
 export default Resume;
 
-const Myresume =styled.section `
-
-
-h2{
-
-	font-size:48px;
-	text-transform:uppercase;
-	margin-top:100px;
-	text-align:center;
-	color:#0ABEAD;
-	font-family:DejaVuSans,AdobeInvisFont,MyriadHebrew-Regular,Poppins-Bold;
-}
-
-.underline{
-
-	width: 100px;
-	border:1px solid;
-	margin-left:45%;
- 	margin-bottom:40px; 
-  	color:#0ABEAD;
-
-}
-.choose {
-	font-size:16px;
-	color:#000;
-	font-family:DejaVuSans,AdobeInvisFont,MyriadHebrew-Regular,Poppins-Regular;
-	text-align:center;
-}
-
-button, select {
-  text-transform: none;
-  width: 195px;
-  text-align: left;
-  margin-top:10px;
-  margin-left:10px;
-}
-.rwt__tablist:not([aria-orientation="vertical"]) .rwt__tab[aria-selected="true"]:after {
-   
-   border-bottom: none;
-}
-.rwt__tablist:not([aria-orientation="vertical"]) {
-    border-bottom: none; 
-}
-
-
-@media only screen and (max-width: 767px) {
-
-
-h2 {
-	font-size:35px;
-  }
-  .underline  {
-  
-	width: 120px;
-	margin-left: 32%;
-  }
-  
-}
-
-@media only screen and (max-width:991px) {
-
-  h2 {
-    margin-top:40px;
-
-  }
-
-}
-
-`

@@ -1,82 +1,42 @@
 import React from 'react';
-import {Navbar, Nav} from 'react-bootstrap';
-import {Link} from 'react-router-dom';
-import styled from 'styled-components';
-import WA from './images/WA.png';
+import { Navbar, Nav } from 'react-bootstrap';
+import './Custom.css';
 
-function Headerbar() {   
+
+ class Headerbar extends React.Component {
+
+
+
+render(){
+
   return (
-          <Myheader>
-          <div className="container">
-            <Navbar bg="light" expand="lg">
-              <img src={WA} alt="Logo" />
-              <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                  <Nav className="links">
-                    <Link to="/">Home</Link>
-                    <Link to="/aboutus">AboutUs</Link>
-                    <Link to="/resume">Resume</Link>
-                    <Link to="/services">Services</Link>
-                    <Link to="/Contact">Contact</Link>
-                  </Nav>
-                </Navbar.Collapse>
-              </Navbar>
-              </div>
-          </Myheader>
-);}
-
+    <>
+      <div className="heading">
+        <div className="container-fluid">
+          <Navbar bg="light" expand="lg" fixed="top" >
+            <h2>G R.</h2>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="ml-auto">
+                <a href="#home">Home</a>
+                <a href="#about">Aboutus</a>
+                <a href="#resume">Resume</a>
+                <a href="#service">Services</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact</a>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
+        </div>
+      </div>
+    </>
+  );
+}
+}
 export default Headerbar;
 
 
 
 
 
-const Myheader = styled.section `
-
-.bg-light {
-  background-color: #fff !important;
-}
-
-a {
-  color: #000;
-  text-decoration: none;
-  background-color: transparent;
-  margin:10px;
-}
-
-a:hover {
-  color: #20c997;
-    
-}
-.links {
-
-  padding-left:300px;
-}
-
-
-@media only screen and (max-width:991px) {
-
-
-.links {
-
-  padding-left:290px;
-}
-
-}
-
-@media only screen and (max-width:767px) {
-
-
-.links {
-
-  padding-left:0px;
-}
-
-}
-
-
-
-
-
-`
 
