@@ -1,5 +1,6 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
+import logo from './images/logo.jpg';
 import './Custom.css';
 
 
