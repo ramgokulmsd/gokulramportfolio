@@ -617,6 +617,9 @@ Form {
 	.happymanimage {
 		display:none;
 	}
+	.name {
+		margin-top:40px;
+	}	
 
 	.contents {
 		text-align:center;
