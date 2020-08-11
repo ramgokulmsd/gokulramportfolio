@@ -15,7 +15,7 @@ render(){
       <div className="heading">
         <div className="container-fluid">
           <Navbar bg="light" expand="lg" fixed="top" >
-            <h2>G R.</h2>
+             <img src={logo} className="logo" alt="logo" />
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ml-auto">
